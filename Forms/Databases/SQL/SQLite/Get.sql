@@ -1,0 +1,1 @@
+﻿SELECT {0}, {1}, {2}, {3} FROM {4} ORDER BY {0}

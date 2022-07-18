@@ -1,2 +1,1 @@
-# coding
-C# library example
+# C-Sharp library example
