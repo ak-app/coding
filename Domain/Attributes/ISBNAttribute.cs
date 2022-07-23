@@ -11,7 +11,7 @@ namespace LibraryManagement.Domain.Attributes
             if (isbn is null)
                 return false;
 
-            // Komplizierte Berechnung der ISBN
+            // Complicated calculation of ISBN
 
             return true;
         }
