@@ -18,15 +18,14 @@ namespace LibraryManagement.Forms
 
         public FormMain()
         {
-            InitializeComponent();
-
+            this.InitializeComponent();
             this.dataGridViewData.DataSource = this.dataService.Get();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             if (this.dataGridViewData.RowCount == 0)
-                Button_Status(false);
+                this.Button_Status(false);
         }
 
         private void Data_Reload()
@@ -35,9 +34,9 @@ namespace LibraryManagement.Forms
             this.dataGridViewData.DataSource = this.dataService.Get();
 
             if (this.dataGridViewData.RowCount == 0)
-                Button_Status(false);
+                this.Button_Status(false);
             else
-                Button_Status(true);
+                this.Button_Status(true);
         }
 
         private void Button_Status(bool status)
@@ -51,9 +50,7 @@ namespace LibraryManagement.Forms
             Book b = this.book;
 
             if (sender == buttonCreate)
-            {
                 b = new Book();
-            }
 
             if (new FormData(this.dataService, b).ShowDialog() != DialogResult.OK)
                 return;
@@ -72,13 +69,10 @@ namespace LibraryManagement.Forms
 
         private void dataGridViewData_SelectionChanged(object sender, EventArgs e)
         {
-            book = null;
+            this.book = null;
 
-            try
-            {
-                book = dataGridViewData.CurrentRow.DataBoundItem as Book;
-            }
-            catch { }
+            if(this.dataGridViewData.CurrentRow.DataBoundItem is not null)
+                this.book = dataGridViewData.CurrentRow.DataBoundItem as Book;
         }
     }
 }

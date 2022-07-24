@@ -15,7 +15,7 @@ namespace LibraryManagement.DataAccess
                 this.Connection.Open();
         }
 
-        public SQLiteConnection Connection { get; private set; }
+        private SQLiteConnection Connection { get; set; }
 
         public override void Insert(Book item)
         {

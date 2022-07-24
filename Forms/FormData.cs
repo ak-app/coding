@@ -11,7 +11,7 @@ namespace LibraryManagement.Forms
 
         public FormData(IDataService<Book> dataService, Book book)
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
             this.book = book;
             this.dataService = dataService;
@@ -21,8 +21,8 @@ namespace LibraryManagement.Forms
         {
             if (this.book.Id == 0)
             {
-                this.Text = Resource.DataResource.Add;
-                this.buttonDo.Text = Resource.DataResource.Add;
+                this.Text = Resource.DataResource.Create;
+                this.buttonDo.Text = Resource.DataResource.Create;
             }
             else
             {
@@ -65,13 +65,13 @@ namespace LibraryManagement.Forms
                 switch (bookex.Accessor)
                 {
                     case nameof(Book.ISBN):
-                        this.TextBoxShowError(textBoxISBN, bookex.Message);
+                        this.TextBoxShowError(this.textBoxISBN, bookex.Message);
                         break;
                     case nameof(Book.Title):
-                        this.TextBoxShowError(textBoxTitle, bookex.Message);
+                        this.TextBoxShowError(this.textBoxTitle, bookex.Message);
                         break;
                     case nameof(Book.Author):
-                        this.TextBoxShowError(textBoxAutor, bookex.Message);
+                        this.TextBoxShowError(this.textBoxAutor, bookex.Message);
                         break;
                     default:
                         MessageBox.Show(bookex.Message, Resource.DataResource.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -100,10 +100,10 @@ namespace LibraryManagement.Forms
 
         private void TextBoxClearError(IEnumerable<TextBox> textBoxes)
         {
-            textBoxes.ToList().ForEach(t =>
+            textBoxes.ToList().ForEach(b =>
             {
-                this.errorProvider.SetError(t, string.Empty);
-                t.BackColor = Color.White;
+                this.errorProvider.SetError(b, string.Empty);
+                b.BackColor = Color.White;
             });
         }
     }

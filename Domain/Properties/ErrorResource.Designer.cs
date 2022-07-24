@@ -61,15 +61,6 @@ namespace LibraryManagement.Domain.Resource {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Darf nicht leer sein ähnelt.
-        /// </summary>
-        internal static string Author {
-            get {
-                return ResourceManager.GetString("Author", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Eintrag darf nur Buchstaben enthalten ähnelt.
         /// </summary>
         internal static string AuthorRegularExpressionAttribute {
@@ -124,20 +115,20 @@ namespace LibraryManagement.Domain.Resource {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Darf nicht leer sein ähnelt.
+        /// </summary>
+        internal static string RequiredAttribute {
+            get {
+                return ResourceManager.GetString("RequiredAttribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ungültige Länge ähnelt.
         /// </summary>
         internal static string StringLengthAttribute {
             get {
                 return ResourceManager.GetString("StringLengthAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Darf nicht leer sein ähnelt.
-        /// </summary>
-        internal static string Title {
-            get {
-                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

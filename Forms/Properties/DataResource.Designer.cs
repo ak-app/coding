@@ -63,9 +63,9 @@ namespace LibraryManagement.Forms.Resource {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
         /// </summary>
-        internal static string Add {
+        internal static string Create {
             get {
-                return ResourceManager.GetString("Add", resourceCulture);
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         

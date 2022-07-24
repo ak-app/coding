@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Author" xml:space="preserve">
-    <value>Darf nicht leer sein</value>
-  </data>
   <data name="AuthorRegularExpressionAttribute" xml:space="preserve">
     <value>Eintrag darf nur Buchstaben enthalten</value>
   </data>
@@ -138,10 +135,10 @@
   <data name="RangeAttribute" xml:space="preserve">
     <value>Wert überschreitet zulässigen Bereich</value>
   </data>
+  <data name="RequiredAttribute" xml:space="preserve">
+    <value>Darf nicht leer sein</value>
+  </data>
   <data name="StringLengthAttribute" xml:space="preserve">
     <value>Ungültige Länge</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Darf nicht leer sein</value>
   </data>
 </root>
