@@ -1,4 +1,4 @@
-[![Version: 1.0 Release](https://img.shields.io/badge/Version-1.0%20Release-green.svg)](https://github.com/sunriax) [![Build Status](https://www.travis-ci.com/ak-app/coding.svg?branch=main)](https://www.travis-ci.com/ak-app/coding) [![codecov](https://codecov.io/gh/ak-app/coding/branch/main/graph/badge.svg)](https://codecov.io/gh/ak-app/coding) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Version: 1.0 Release](https://img.shields.io/badge/Version-1.0%20Release-green.svg)](https://github.com/sunriax) [![.NET Core Desktop](https://github.com/ak-app/coding/actions/workflows/dotnet-release.yml/badge.svg)](https://github.com/ak-app/coding/actions/workflows/dotnet-release.yml) [![codecov](https://codecov.io/gh/ak-app/coding/branch/main/graph/badge.svg)](https://codecov.io/gh/ak-app/coding) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
 # C# library example
