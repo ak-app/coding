@@ -14,6 +14,9 @@ jobs:
       Configuration: Release
 
     steps:
+    - name: Install 7Zip PowerShell Module
+      shell: powershell
+      run: Install-Module 7Zip4PowerShell -Force -Verbose
     - name: Checkout
       uses: actions/checkout@v3
       with:
@@ -36,8 +39,8 @@ jobs:
 
     - name: Create Release content
       run: |
-        zip -r Template.zip .\Template
-        zip -r LibraryManagement.zip Forms\bin\${{ env.Configuration }}\net6.0-windows\
+        powershell Compress-7Zip "Template" -ArchiveFileName "LibraryManagement-FormTemplate.zip" -Format Zip
+        powershell Compress-7Zip "Forms\bin\${{ env.Configuration }}\net6.0-windows\" -ArchiveFileName "LibraryManagement.zip" -Format Zip
 
     - name: Create Release
       id: create_release
@@ -56,8 +59,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: Template.zip
-        asset_name: LibraryFormTemplate.zip
+        asset_path: LibraryManagement-FormTemplate.zip
+        asset_name: LibraryManagement-FormTemplate.zip
         asset_content_type: application/zip
         
     - name: Upload Template asset 
