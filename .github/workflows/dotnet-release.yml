@@ -24,12 +24,12 @@ jobs:
 
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
 
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v1.1
 
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
@@ -39,8 +39,8 @@ jobs:
 
     - name: Create Release content
       run: |
-        powershell Compress-7Zip "Template" -ArchiveFileName "LibraryManagement-FormTemplate.zip" -Format Zip
-        powershell Compress-7Zip "Forms\bin\${{ env.Configuration }}\net6.0-windows\" -ArchiveFileName "LibraryManagement.zip" -Format Zip
+        powershell Compress-7Zip "_Template" -ArchiveFileName "LibraryManagement-FormTemplate.zip" -Format Zip
+        powershell Compress-7Zip "LibraryManagement.Forms\bin\${{ env.Configuration }}\net6.0-windows\" -ArchiveFileName "LibraryManagement.zip" -Format Zip
 
     - name: Create Release
       id: create_release

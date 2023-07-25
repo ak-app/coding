@@ -31,12 +31,12 @@ jobs:
 
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
 
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v1.1
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
@@ -55,6 +55,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MSIX Package
-        path: Forms\bin\${{ env.Configuration }}\net6.0-windows
+        path: LibraryManagement.Forms\bin\${{ env.Configuration }}\net6.0-windows
       env:
         Configuration: ${{ matrix.configuration }}

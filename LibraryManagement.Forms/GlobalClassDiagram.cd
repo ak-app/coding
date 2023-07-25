@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryManagement.Access.ValidateBookDataAccess">
+    <Position X="6.25" Y="3" Width="2.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManagement.Access.Db.BookDataAccess">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Access.File.BookDataAccess">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Access.Memory.BookDataAccess">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Access.Core.BookDataAccess">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Business.BookDataService">
+    <Position X="1.75" Y="1.5" Width="3.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Models.BaseModel">
+    <Position X="6.25" Y="8.75" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Models.Book">
+    <Position X="6.25" Y="10.75" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LibraryManagement.Models.Attributes.ISBNAttribute">
+    <Position X="9.5" Y="10.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="LibraryManagement.Access.Interfaces.IDataAccess&lt;T&gt;">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
